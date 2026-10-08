@@ -66,7 +66,7 @@ mkdocs serve                     # open http://127.0.0.1:8000
 1. Create a new public repository on GitHub (e.g. `climate-toolkit`) and push this folder to it.
 2. In the repository, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
 3. In `mkdocs.yml`, replace `YOUR-GITHUB-USERNAME` with the GitHub user or organisation name.
-4. The site will be live at `https://YOUR-GITHUB-USERNAME.github.io/climate-toolkit/`.
+4. The site will be live at `https://jumin94.github.io/climate_toolkit/`.
 
 A custom domain (e.g. `toolkit.baseinitiative.net`) can be added later under **Settings → Pages**.
 

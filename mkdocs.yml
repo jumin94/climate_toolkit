@@ -1,8 +1,8 @@
 site_name: Climate Toolkit · BASE
 site_description: A toolkit by the BASE initiative (Fundación Avina) and WCRP My Climate Risk for generating climate evidence that is scientifically robust and locally meaningful.
 # After creating the GitHub repository, set these two lines to match it:
-site_url: https://YOUR-GITHUB-USERNAME.github.io/climate-toolkit/
-repo_url: https://github.com/YOUR-GITHUB-USERNAME/climate-toolkit
+site_url: https://jumin94.github.io/climate_toolkit/
+repo_url: https://github.com/jumin94/climate_toolkit
 repo_name: Edit on GitHub
 edit_uri: edit/main/docs/
 
