@@ -1,0 +1,72 @@
+site_name: Climate Toolkit · BASE
+site_description: A toolkit by the BASE initiative (Fundación Avina) and WCRP My Climate Risk for generating climate evidence that is scientifically robust and locally meaningful.
+# After creating the GitHub repository, set these two lines to match it:
+site_url: https://YOUR-GITHUB-USERNAME.github.io/climate-toolkit/
+repo_url: https://github.com/YOUR-GITHUB-USERNAME/climate-toolkit
+repo_name: Edit on GitHub
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Modules:
+      - "1 · Knowledge types, scales & uncertainty": modules/module-1.md
+      - "2 · Causal diagrams": modules/module-2.md
+      - "3 · Understanding the local context": modules/module-3.md
+      - "4 · Climatic impact-drivers": modules/module-4.md
+      - "5 · Historical changes & attribution": modules/module-5.md
+      - "6 · Large-scale climate drivers": modules/module-6.md
+      - "7 · Future climate projections": modules/module-7.md
+      - "8 · Communicating climate stories": modules/module-8.md
+  - Who we are: about.md
+  - Download PDF: assets/downloads/climate-toolkit-base.pdf
+
+theme:
+  name: material
+  logo: assets/figures/logo-base.png
+  favicon: assets/figures/logo-base.png
+  font:
+    text: Noto Serif
+    code: Roboto Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle: { icon: material/weather-night, name: Dark mode }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle: { icon: material/weather-sunny, name: Light mode }
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.action.edit
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+
+copyright: >
+  Toolkit content © the authors, the BASE initiative (Fundación Avina) and WCRP My Climate Risk.

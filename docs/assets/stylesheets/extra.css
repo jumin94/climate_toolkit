@@ -1,0 +1,83 @@
+/* Colours taken from the printed toolkit */
+:root {
+  --tk-rust: #a8441a;
+  --tk-sage: #8a9e8f;
+  --tk-grey: #6b6b6b;
+  --tk-pink: #c46aa0;
+  --tk-blue: #6fa3cc;
+  --tk-cream: #fdf3e8;
+  --tk-forest: #1f3a2b;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--tk-forest);
+  --md-primary-fg-color--light: #2e5440;
+  --md-primary-fg-color--dark: #142a1e;
+  --md-accent-fg-color: var(--tk-rust);
+  --md-default-bg-color: var(--tk-cream);
+  --md-typeset-a-color: var(--tk-rust);
+}
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--tk-forest);
+  --md-accent-fg-color: #e0875c;
+  --md-typeset-a-color: #e0875c;
+}
+
+.md-typeset h1, .md-typeset h2 { color: var(--tk-rust); font-weight: 700; }
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2 { color: #e0875c; }
+.md-typeset h1 .module-label { display: block; font-size: .5em; letter-spacing: .08em; text-transform: uppercase; opacity: .8; }
+
+/* Figures */
+.md-typeset figure { margin: 1.6em auto; }
+.md-typeset figure img { border-radius: 6px; background: #fff; }
+.md-typeset figcaption { max-width: 42rem; font-size: .72rem; text-align: left; font-style: normal; }
+
+/* Module box types: Definitions / FAQ / How-To / Examples / Background */
+.md-typeset .admonition, .md-typeset details { font-size: .78rem; }
+.md-typeset .admonition.definitions, .md-typeset details.definitions { border-color: var(--tk-sage); }
+.md-typeset .definitions > .admonition-title, .md-typeset .definitions > summary { background-color: color-mix(in srgb, var(--tk-sage) 18%, transparent); }
+.md-typeset .definitions > .admonition-title::before, .md-typeset .definitions > summary::before { background-color: var(--tk-sage); -webkit-mask-image: var(--md-admonition-icon--abstract); mask-image: var(--md-admonition-icon--abstract); }
+
+.md-typeset .admonition.faq, .md-typeset details.faq { border-color: var(--tk-grey); }
+.md-typeset .faq > .admonition-title, .md-typeset .faq > summary { background-color: color-mix(in srgb, var(--tk-grey) 15%, transparent); }
+.md-typeset .faq > .admonition-title::before, .md-typeset .faq > summary::before { background-color: var(--tk-grey); -webkit-mask-image: var(--md-admonition-icon--question); mask-image: var(--md-admonition-icon--question); }
+
+.md-typeset .admonition.howto, .md-typeset details.howto { border-color: var(--tk-pink); }
+.md-typeset .howto > .admonition-title, .md-typeset .howto > summary { background-color: color-mix(in srgb, var(--tk-pink) 15%, transparent); }
+.md-typeset .howto > .admonition-title::before, .md-typeset .howto > summary::before { background-color: var(--tk-pink); -webkit-mask-image: var(--md-admonition-icon--tip); mask-image: var(--md-admonition-icon--tip); }
+
+.md-typeset .admonition.examples, .md-typeset details.examples { border-color: var(--tk-blue); }
+.md-typeset .examples > .admonition-title, .md-typeset .examples > summary { background-color: color-mix(in srgb, var(--tk-blue) 15%, transparent); }
+.md-typeset .examples > .admonition-title::before, .md-typeset .examples > summary::before { background-color: var(--tk-blue); -webkit-mask-image: var(--md-admonition-icon--example); mask-image: var(--md-admonition-icon--example); }
+
+.md-typeset .admonition.background, .md-typeset details.background { border-color: var(--tk-rust); }
+.md-typeset .background > .admonition-title, .md-typeset .background > summary { background-color: color-mix(in srgb, var(--tk-rust) 12%, transparent); }
+.md-typeset .background > .admonition-title::before, .md-typeset .background > summary::before { background-color: var(--tk-rust); -webkit-mask-image: var(--md-admonition-icon--info); mask-image: var(--md-admonition-icon--info); }
+
+/* Section labels used as headings inside modules (mirrors the coloured side tabs) */
+.md-typeset .tag { display: inline-block; padding: .1em .6em; border-radius: 3px; color: #fff; font-family: var(--md-text-font-family); font-size: .65rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; vertical-align: middle; }
+.tag.definitions { background: var(--tk-sage); } .tag.faq { background: var(--tk-grey); }
+.tag.howto { background: var(--tk-pink); } .tag.examples { background: var(--tk-blue); } .tag.background { background: var(--tk-rust); }
+
+/* Home page */
+.tk-hero { padding: 2.2rem 0 1.4rem; }
+.tk-hero h1 { margin: 0 0 .2em; font-size: 2.4rem; }
+.tk-hero p.lead { font-size: 1.05rem; margin-top: 0; max-width: 38rem; }
+.tk-logos { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin: 1.2rem 0; }
+.tk-logos img { height: 44px; border-radius: 4px; }
+
+.tk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .8rem; margin: 1.2rem 0 2rem; }
+.md-typeset a.tk-card { display: block; padding: .9rem 1rem; border-radius: 8px; background: rgba(168, 68, 26, .07); border: 1px solid rgba(168, 68, 26, .25); color: var(--md-default-fg-color); transition: border-color .15s, transform .15s; }
+.md-typeset a.tk-card:hover { border-color: var(--tk-rust); transform: translateY(-2px); }
+.tk-card .num { font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--tk-rust); }
+.tk-card strong { display: block; margin: .2em 0 .3em; font-size: .85rem; }
+.tk-card span.desc { font-size: .7rem; opacity: .8; }
+
+.references p { font-size: .72rem; padding-left: 1.5em; text-indent: -1.5em; margin: .5em 0; }
+
+/* Buttons readable in both themes */
+.md-typeset .md-button { color: var(--md-accent-fg-color); border-color: var(--md-accent-fg-color); }
+.md-typeset .md-button--primary { background-color: var(--tk-rust); border-color: var(--tk-rust); color: #fff; }
+.md-typeset .md-button:hover, .md-typeset .md-button--primary:hover { background-color: var(--tk-forest); border-color: var(--tk-forest); color: #fff; }
+[data-md-color-scheme="slate"] .md-typeset .md-button:hover { background-color: #e0875c; border-color: #e0875c; color: #1f1f1f; }
